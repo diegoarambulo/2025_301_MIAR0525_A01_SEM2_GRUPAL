@@ -14,8 +14,7 @@ real y en constante alimentacion sobre accesos de diversos tipos sobre mas de 20
 para efectos academicos, la misma que puede ser obtenida directo desde el siguiente [<a href="https://drive.google.com/uc?id=16G0p0_DYZXyteQRUrqc0IWn_MkPTyX8A&export=download">link</a>].
 
 ### Resumen de la problematica
-Como problematica real e identificada para poder abordar el uso del dataset, tenemos el de identificar y predecir ataques informaticos a partir de patrones
-anteriormente separados mediante heuristica avanzada o registros historicos encontrados en el dataset BETH.
+Identificación temprana y proactiva de posibles vulnerabilidades en el sector de la ciberseguridad mediante la implementación de clasificadores supervisados usando Regresión logística, SVM(Suport Virtual Machine) y Árboles de decisión para encontrar el mejor resultado y rendimiento al evaluar sus métricas.
 
 ### Objetivo general identificado
 Desarrollo y creacion de un modelo de machine learning que permita a una organizacion predecir y detectar ataques a nivel de IT, mediante el analisis
