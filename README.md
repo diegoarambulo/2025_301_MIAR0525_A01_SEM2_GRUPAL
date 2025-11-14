@@ -20,10 +20,11 @@ La detección de amenazas desconocidas y la identificación proactiva de vulnera
 Este proyecto se enfoca en la identificación temprana y proactiva de posibles vulnerabilidades y patrones anómalos dentro del sector de la ciberseguridad haciendo uso de un dataset de BETH, a través de la implementación y el análisis avanzado de modelos de aprendizaje no supervisado como K-means, DBSCAN, PCA y t-SNE. 
 
 ### Objetivos especificos detectados
-1.- Analizar el dataset BETH e indentificar los ataques mas comunes del sector.
-2.- Identificar patrones relevantes, como horario, origen y/o punto geografico de los ataques.
-3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa
-	los diferentes ataques a la infraestructura de IT.
+
+1.- Analizar el dataset BETH e indentificar los ataques mas comunes del sector./n
+2.- Identificar patrones relevantes, como horario, origen y/o punto geografico de los ataques./n
+3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa/n
+	los diferentes ataques a la infraestructura de IT./n
 	
 ### Puntos de mejora esperados
 1.- Reducir o evitar manejar "downtimes" por efecto secundario de un ciberataque.
