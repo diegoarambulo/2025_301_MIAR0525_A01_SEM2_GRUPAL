@@ -21,13 +21,19 @@ Este proyecto se enfoca en la identificación temprana y proactiva de posibles v
 
 ### Objetivos especificos detectados
 
-1.- Analizar el dataset BETH e indentificar los ataques mas comunes del sector./n
-2.- Identificar patrones relevantes, como horario, origen y/o punto geografico de los ataques./n
-3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa/n
-	los diferentes ataques a la infraestructura de IT./n
+1.- Analizar el dataset BETH e indentificar los ataques mas comunes del sector.
+
+2.- Identificar patrones relevantes, como horario, origen y/o punto geografico de los ataques.
+
+3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa
+	los diferentes ataques a la infraestructura de IT.
+	
 	
 ### Puntos de mejora esperados
 1.- Reducir o evitar manejar "downtimes" por efecto secundario de un ciberataque.
+
 2.- Tener la capacidad de tener un plan de accion frante a una amaneza emergente.
+
 3.- Planificar y priorizar las defensas de IT basadose en data real, mas no en ataques esperados.
+
 
