@@ -1,5 +1,5 @@
-### 2025_301_MIAR0525_A01_SEM2_GRUPAL
-Repositorio grupal para los entregables de la actividad grupal de la semana 2 - Grupo 6
+### 2025_301_MIAR0525_A01_SEM3_GRUPAL
+Repositorio grupal para los entregables de la actividad grupal de la semana 3 - Grupo 6
 
 ### Integrantes
 * Diego Arambulo Vitores
