@@ -8,7 +8,7 @@ Repositorio grupal para los entregables de la actividad grupal de la semana 2 - 
 
 ### Informacion sobre el dataset usado
 Nuestro dataset fue obtenido del portal de bases abiertas y gratuitas [<a href="https://www.kaggle.com/">kaggle</a>], mas en especifico 
-la denominada [<a href="https://www.kaggle.com/datasets/katehighnam/beth-dataset?resource=download">BETH</a>], que deriva su nombre de la forma en que captura la informacion real sobre cyberseguridad, que se basa en trampas digitales
+la denominada [<a href="https://drive.google.com/uc?id=1YmQ0UqU5UTKB_qkegpWdzJsufrAp_J3u&export=download">BETH</a>], que deriva su nombre de la forma en que captura la informacion real sobre cyberseguridad, que se basa en trampas digitales
 denominadas como "honey pots", al cual se le hace un seguimiento extendido para ver su comportamiento. Este set de datos contiene Informacion
 real y en constante alimentacion sobre accesos de diversos tipos sobre mas de 20 unidades de honeypots. Para efecto de eficiencia, hemos reducido el dataset original a una version segmentada para ser soportada
 para efectos academicos, la misma que puede ser obtenida directo desde el siguiente [<a href="https://drive.google.com/uc?id=16G0p0_DYZXyteQRUrqc0IWn_MkPTyX8A&export=download">link</a>].
