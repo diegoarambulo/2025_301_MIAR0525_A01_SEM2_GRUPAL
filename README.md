@@ -21,12 +21,11 @@ Este proyecto se enfoca en la identificación temprana y proactiva de posibles v
 
 ### Objetivos especificos detectados
 
-1.- Analizar el dataset BETH e indentificar los ataques mas comunes del sector.
+1.-Análisis Exploratorio: Analizar el dataset BETH e identificar las características de los accesos más comunes y sus métricas.
 
-2.- Identificar patrones relevantes, como horario, origen y/o punto geografico de los ataques.
+2.- Descubrimiento de Patrones: Identificar patrones relevantes de actividad sospechosa, como la frecuencia, el horario, el origen y/o el punto geográfico de los accesos anómalos.
 
-3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa
-	los diferentes ataques a la infraestructura de IT.
+3.- Modelado No Supervisado: Crear y entrenar modelos de Machine Learning no supervisado basados en el dataset para que puedan reconocer de forma exitosa los diferentes clusters de actividad y anomalías en la infraestructura de TI.
 	
 ### Análisis Comparativo entre Modelos
 
