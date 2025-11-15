@@ -30,20 +30,20 @@ Este proyecto se enfoca en la identificación temprana y proactiva de posibles v
 	
 ### Análisis Comparativo entre Modelos
 
-## ¿Qué tipo de perfiles se pueden identificar?
+#### ¿Qué tipo de perfiles se pueden identificar?
 Entre los perfiles mas notables podemos identificar los siguientes:
 Ataques cibernéticos realizados en horarios diurnos
 Ataque por apertura de archivos
 Ataque iniciados por procesos de sistema
 Ataque por apertura de conexión
 
-## ¿Qué diferencias clave surgieron entre los modelos?
+#### ¿Qué diferencias clave surgieron entre los modelos?
 K-means, al utilizar como base la distancia euclidiana,  revelara clusters limpios y esféricos, podemos considerarlo como la base.
 DBSCAN, en cambio revelara cluster arbitrarios etiquetando los outliers con -1, ya que se basa en densidad mas no en distancia, útil cuando no hay balance en las clases, pero agrega ruido.
 PCA, siendo realmente mas alineado a una reducción de dimensionalidad, se refleja de forma global y preserva la varianza, no tiene captación para estructuras no lineales, mayormente usado para identificar direcciones mas no separar cluster
 T-SNE, al igual que PCA sirve mas para reducir densidad, para data no lineal. Revela cluster bien definidos, clusters de puntos cercanos y compactos, ademas de la posibilidad de mostrar continuidades escondidas
 
-## ¿Qué limitaciones encontraron y cómo las abordarían?
+#### ¿Qué limitaciones encontraron y cómo las abordarían?
 Implementación K-means
 se asume cluster esféricos y altamente definidos ===> limpieza de outliers antes de clusterizar
 alta sensibilidad con los outliers ===> si la forma del cluster no es esferiza, implementar K-medoids o modelo gauseano de mezcla
@@ -58,10 +58,10 @@ genera clusters atractivos que pueden ser falsos ===> usarlo solo de forma explo
 alta sensibilidad a hiperparámetros siendo inestable ===> Ajustar learning rate y validar con otros métodos
 
 ### Conclusiones y recomendaciones
-Con la capacidad de sectorizar los puntos de impacto, tal cual nos indica los clusters, podremos ser mas eficientes y estratégicos al momento de ejecutar un mecanismo de contingencia.
+- Con la capacidad de sectorizar los puntos de impacto, tal cual nos indica los clusters, podremos ser mas eficientes y estratégicos al momento de ejecutar un mecanismo de contingencia.
 
-Al momento de realizar las transformaciones necesarias, debemos tener en cuenta que usar datos lineales le darán mayor sentido a nuestra almacen de informacion y por consiguiente en todos los dashboards que usemos. (recordemos que en el caso de la base BETH no existen un numero natural de clusters por lo que la definición de K para K-means puede tornarse conflictiva)
+- Al momento de realizar las transformaciones necesarias, debemos tener en cuenta que usar datos lineales le darán mayor sentido a nuestra almacen de informacion y por consiguiente en todos los dashboards que usemos. (recordemos que en el caso de la base BETH no existen un numero natural de clusters por lo que la definición de K para K-means puede tornarse conflictiva)
 
-No existe un modelo de ML perfecto para todos los problemas cotidianos, un analisis y comparativa es necesario para tomar el mas eficiente y adecuado a nuestras necesidades, métodos de redimensionamiento como el PCA pueden ser difíciles de interpretar debido a su capacidad de mezclar señales con ruidos, no deberían ser definitivos en estructuras finales.
+- No existe un modelo de ML perfecto para todos los problemas cotidianos, un analisis y comparativa es necesario para tomar el mas eficiente y adecuado a nuestras necesidades, métodos de redimensionamiento como el PCA pueden ser difíciles de interpretar debido a su capacidad de mezclar señales con ruidos, no deberían ser definitivos en estructuras finales.
 
-El uso de t-sne, es correcto si solo haremos exploración visual de los resultados, ya que estos serán de carácter ficticio, y no deben usarse para segmentación.
+- El uso de t-sne, es correcto si solo haremos exploración visual de los resultados, ya que estos serán de carácter ficticio, y no deben usarse para segmentación.
