@@ -28,12 +28,40 @@ Este proyecto se enfoca en la identificación temprana y proactiva de posibles v
 3.- Crear y entrenar un modelo de ML no supervisado basado en el dataset, puede reconocer de forma exitosa
 	los diferentes ataques a la infraestructura de IT.
 	
-	
-### Puntos de mejora esperados
-1.- Reducir o evitar manejar "downtimes" por efecto secundario de un ciberataque.
+### Análisis Comparativo entre Modelos
 
-2.- Tener la capacidad de tener un plan de accion frante a una amaneza emergente.
+## ¿Qué tipo de perfiles se pueden identificar?
+Entre los perfiles mas notables podemos identificar los siguientes:
+Ataques cibernéticos realizados en horarios diurnos
+Ataque por apertura de archivos
+Ataque iniciados por procesos de sistema
+Ataque por apertura de conexión
 
-3.- Planificar y priorizar las defensas de IT basadose en data real, mas no en ataques esperados.
+## ¿Qué diferencias clave surgieron entre los modelos?
+K-means, al utilizar como base la distancia euclidiana,  revelara clusters limpios y esféricos, podemos considerarlo como la base.
+DBSCAN, en cambio revelara cluster arbitrarios etiquetando los outliers con -1, ya que se basa en densidad mas no en distancia, útil cuando no hay balance en las clases, pero agrega ruido.
+PCA, siendo realmente mas alineado a una reducción de dimensionalidad, se refleja de forma global y preserva la varianza, no tiene captación para estructuras no lineales, mayormente usado para identificar direcciones mas no separar cluster
+T-SNE, al igual que PCA sirve mas para reducir densidad, para data no lineal. Revela cluster bien definidos, clusters de puntos cercanos y compactos, ademas de la posibilidad de mostrar continuidades escondidas
 
+## ¿Qué limitaciones encontraron y cómo las abordarían?
+Implementación K-means
+se asume cluster esféricos y altamente definidos ===> limpieza de outliers antes de clusterizar
+alta sensibilidad con los outliers ===> si la forma del cluster no es esferiza, implementar K-medoids o modelo gauseano de mezcla
+Implementación DBSCAN
+hiperparámetros difíciles de pulir ===> para el ajuste eps, se podría usar k-dist plot en conjunto con grid
+baja eficiencia en datasets de grande dimension ===> para un manejo de densidades variadas, se usaría High density BSCAN
+Implementación PCA
+pierde patrones complejos al capturar solo relaciones lineales ===> realizar una selección de features  sumado a una normalización antes de usar el PCA
+existe posibilidad de mezclar ruido y señal ===> mezclarlo con métodos no lineales para capturas mas finas
+Implementación t-SNE
+genera clusters atractivos que pueden ser falsos ===> usarlo solo de forma exploratoria
+alta sensibilidad a hiperparámetros siendo inestable ===> Ajustar learning rate y validar con otros métodos
 
+### Conclusiones y recomendaciones
+Con la capacidad de sectorizar los puntos de impacto, tal cual nos indica los clusters, podremos ser mas eficientes y estratégicos al momento de ejecutar un mecanismo de contingencia.
+
+Al momento de realizar las transformaciones necesarias, debemos tener en cuenta que usar datos lineales le darán mayor sentido a nuestra almacen de informacion y por consiguiente en todos los dashboards que usemos. (recordemos que en el caso de la base BETH no existen un numero natural de clusters por lo que la definición de K para K-means puede tornarse conflictiva)
+
+No existe un modelo de ML perfecto para todos los problemas cotidianos, un analisis y comparativa es necesario para tomar el mas eficiente y adecuado a nuestras necesidades, métodos de redimensionamiento como el PCA pueden ser difíciles de interpretar debido a su capacidad de mezclar señales con ruidos, no deberían ser definitivos en estructuras finales.
+
+El uso de t-sne, es correcto si solo haremos exploración visual de los resultados, ya que estos serán de carácter ficticio, y no deben usarse para segmentación.
