@@ -13,8 +13,10 @@ denominadas como "honey pots", al cual se le hace un seguimiento extendido para 
 real y en constante alimentacion sobre accesos de diversos tipos sobre mas de 20 unidades de honeypots. Para efecto de eficiencia, hemos reducido el dataset original a una version segmentada para ser soportada
 para efectos academicos, la misma que puede ser obtenida directo desde el siguiente [<a href="https://drive.google.com/uc?id=16G0p0_DYZXyteQRUrqc0IWn_MkPTyX8A&export=download">link</a>].
 
-### Resumen de la problematica
-La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en entornos de ciberseguridad requieren de metodologías que superen las limitaciones de los datos etiquetados. Se establece que el reto es superar las "limitaciones de los datos etiquetados", una debilidad común en la ciberseguridad, justificando el uso del aprendizaje no supervisado.
+### Problemática
+La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en los entornos de ciberseguridad actuales exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados.
+Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje no supervisado. 
+Dentro de este contexto es importante identificar y mitigar posibles sesgos en datasets de entrenamiento para que los modelos de aprendizaje no estén determinados por variables sesgadas. 
 
 ### Objetivo general identificado
 Este proyecto se enfoca en la identificación temprana y proactiva de posibles vulnerabilidades y patrones anómalos dentro del sector de la ciberseguridad haciendo uso de un dataset de BETH, a través de la implementación y el análisis avanzado de modelos de aprendizaje no supervisado como K-means, DBSCAN, PCA y t-SNE. 
