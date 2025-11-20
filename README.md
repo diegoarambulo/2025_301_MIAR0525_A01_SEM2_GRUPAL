@@ -15,11 +15,13 @@ para efectos academicos, la misma que puede ser obtenida directo desde el siguie
 
 ### Problemática
 La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en los entornos de ciberseguridad actuales exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados.
-Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje supervisado. 
-Dentro de este contexto es importante identificar y mitigar posibles sesgos en datasets de entrenamiento para que los modelos de aprendizaje no estén determinados por variables sesgadas. 
+La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en ciberseguridad exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados y los sesgos contextuales.
+Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje supervisado como Random Forest.
+Dentro de este contexto, la principal problemática es identificar y mitigar los sesgos críticos en el dataset de entrenamiento BETH para asegurar que el modelo de Machine Learning no esté determinado por variables sesgadas, transformándolo de una "caja negra" a un sistema interpretable y operable. Dada la complejidad no lineal de Random Forest, se requiere la implementación de SHAP para la validación global del sesgo mitigado y LIME (para la auditoría forense local.
 
 ### Objetivo general identificado
-Este proyecto se enfoca en la identificación temprana y proactiva de posibles vulnerabilidades y patrones anómalos dentro del sector de la ciberseguridad haciendo uso de un dataset de BETH, a través de la implementación y el análisis avanzado de modelos de aprendizaje no supervisado como K-means, DBSCAN, PCA y t-SNE. 
+
+La principal problemática es cómo asegurar que el modelo de Machine Learning supervisado Random Forest, desarrollado para la detección proactiva de patrones anómalos en el dataset BETH, sea un sistema de defensa robusto y confiable, capaz de superar sus sesgos inherentes y la vulnerabilidad a ataques de evasión, garantizando su efectividad operativa fuera del entorno de entrenamiento. 
 
 ### Objetivos especificos detectados
 
@@ -27,7 +29,7 @@ Este proyecto se enfoca en la identificación temprana y proactiva de posibles v
 
 2.- Descubrimiento de Patrones: Identificar patrones relevantes de actividad sospechosa, como la frecuencia, el horario, tipo de ataques, etc.
 
-3.- Modelado No Supervisado: Crear y entrenar modelos de Machine Learning no supervisado basados en el dataset para que puedan reconocer de forma exitosa los diferentes clusters de actividad y anomalías en la infraestructura de TI.
+3.- Modelado Supervisado: Implementar y entrenar el modelo de Machine Learning supervisado basados en el dataset para que puedan reconocer de forma exitosa los diferentes actividades y anomalías en la infraestructura de TI.
 	
 ### Análisis Comparativo entre Modelos
 
