@@ -38,25 +38,22 @@ Ataque por apertura de archivos
 Ataque iniciados por procesos de sistema
 Ataque por apertura de conexión
 
-#### ¿Qué diferencias clave surgieron entre los modelos?
-K-means, al utilizar como base la distancia euclidiana,  revelara clusters limpios y esféricos, podemos considerarlo como la base.
-DBSCAN, en cambio revelara cluster arbitrarios etiquetando los outliers con -1, ya que se basa en densidad mas no en distancia, útil cuando no hay balance en las clases, pero agrega ruido.
-PCA, siendo realmente mas alineado a una reducción de dimensionalidad, se refleja de forma global y preserva la varianza, no tiene captación para estructuras no lineales, mayormente usado para identificar direcciones mas no separar cluster
-T-SNE, al igual que PCA sirve mas para reducir densidad, para data no lineal. Revela cluster bien definidos, clusters de puntos cercanos y compactos, ademas de la posibilidad de mostrar continuidades escondidas
+#### ¿Que resultados se obtuvieron al analizar si existia sesgo en el dataset?
+Dentro de los analisis, se pudo evidenciar que el dataset mostraba tendencia a overfiting en ciertos cumulos de informacion como los son: el processName, y el userId, en el siguiente grafico podremos observar un sesgo detectado por proceso
+como evento benigno siempre, o cual claramente va a entrenar de forma errada el modelo escogido, en este caso un random forest:
+![Texto alternativo](images/analisisSesgoXproceso.png)
 
-#### ¿Qué limitaciones encontraron y cómo las abordarían?
-Implementación K-means
-se asume cluster esféricos y altamente definidos ===> limpieza de outliers antes de clusterizar
-alta sensibilidad con los outliers ===> si la forma del cluster no es esferiza, implementar K-medoids o modelo gauseano de mezcla
-Implementación DBSCAN
-hiperparámetros difíciles de pulir ===> para el ajuste eps, se podría usar k-dist plot en conjunto con grid
-baja eficiencia en datasets de grande dimension ===> para un manejo de densidades variadas, se usaría High density BSCAN
-Implementación PCA
-pierde patrones complejos al capturar solo relaciones lineales ===> realizar una selección de features  sumado a una normalización antes de usar el PCA
-existe posibilidad de mezclar ruido y señal ===> mezclarlo con métodos no lineales para capturas mas finas
-Implementación t-SNE
-genera clusters atractivos que pueden ser falsos ===> usarlo solo de forma exploratoria
-alta sensibilidad a hiperparámetros siendo inestable ===> Ajustar learning rate y validar con otros métodos
+
+#### ¿Qué resultados se obtuvieron al aplicar los metodos de fairness SHAP y LIME?
+Dentro del metodo shap, podemos entender de mejor forma porque el modelo actua o predice los valores y tendencias de una forma u otra, y esto lo aplica basandose en el peso de relevancia que tiene una variable con respecto a una tendencia encontrada
+esto lo podremos apreciar de mejor forma en el siquiente diagrama donde, se no indica que la variable processName, es la mas relevante al momento de detectar una anomalia o evento en el dataset.
+![Texto alternativo](images/TopIndicadoresAtaqueXproceso.png)
+
+
+De la misma forma, LIME, pretende explicar como las perturbaciones hacia un unico registro tomado de la muestra, cambia sus resultados hacia el test realizado a el, esto no permite encontrar como los cambios en las entradas del modelo se traducen
+en cambios sutiles o abruptos como resultado del estrato general de informacion. A continuacion podremos observar como el analisis LIME, detecta que processName entra dentro de las reglas de decision por ser altamente relevante a diferencia del 
+resto como eventName o args.
+![Texto alternativo](images/explicabilidadLime.png)
 
 ### Conclusiones y recomendaciones
 - Con la capacidad de sectorizar los puntos de impacto, tal cual nos indica los clusters, podremos ser mas eficientes y estratégicos al momento de ejecutar un mecanismo de contingencia.
