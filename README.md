@@ -14,7 +14,7 @@ real y en constante alimentacion sobre accesos de diversos tipos sobre mas de 20
 para efectos academicos, la misma que puede ser obtenida directo desde el siguiente [<a href="https://drive.google.com/uc?id=16G0p0_DYZXyteQRUrqc0IWn_MkPTyX8A&export=download">link</a>].
 
 ### Problemática
-La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en los entornos de ciberseguridad actuales exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados.
+
 La identificación de amenazas desconocidas y la identificación proactiva de vulnerabilidades en ciberseguridad exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados y los sesgos contextuales.
 Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje supervisado como Random Forest.
 Dentro de este contexto, la principal problemática es identificar y mitigar los sesgos críticos en el dataset de entrenamiento BETH para asegurar que el modelo de Machine Learning no esté determinado por variables sesgadas, transformándolo de una "caja negra" a un sistema interpretable y operable. Dada la complejidad no lineal de Random Forest, se requiere la implementación de SHAP para la validación global del sesgo mitigado y LIME (para la auditoría forense local.
