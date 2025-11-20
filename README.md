@@ -15,13 +15,14 @@ para efectos academicos, la misma que puede ser obtenida directo desde el siguie
 
 ### Problemática
 
-La identificación de amenazas desconocidas y la identificación proactiva de vulnerabilidades en ciberseguridad exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados y los sesgos contextuales.
+La principal problemática es cómo asegurar que el modelo de Machine Learning supervisado Random Forest, desarrollado para la detección proactiva de patrones anómalos en el dataset BETH, sea un sistema de defensa robusto y confiable, capaz de superar sus sesgos inherentes y la vulnerabilidad a ataques de evasión, garantizando su efectividad operativa fuera del entorno de entrenamiento. 
+La identificación de amenazas desconocidas y la detección proactiva de vulnerabilidades en ciberseguridad exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados y los sesgos contextuales.
 Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje supervisado como Random Forest.
 Dentro de este contexto, la principal problemática es identificar y mitigar los sesgos críticos en el dataset de entrenamiento BETH para asegurar que el modelo de Machine Learning no esté determinado por variables sesgadas, transformándolo de una "caja negra" a un sistema interpretable y operable. Dada la complejidad no lineal de Random Forest, se requiere la implementación de SHAP para la validación global del sesgo mitigado y LIME para la auditoría forense local.
 
 ### Objetivo general identificado
 
-La principal problemática es cómo asegurar que el modelo de Machine Learning supervisado Random Forest, desarrollado para la detección proactiva de patrones anómalos en el dataset BETH, sea un sistema de defensa robusto y confiable, capaz de superar sus sesgos inherentes y la vulnerabilidad a ataques de evasión, garantizando su efectividad operativa fuera del entorno de entrenamiento. 
+Este proyecto se enfoca en la identificación temprana y proactiva de posibles vulnerabilidades y patrones anómalos dentro del sector de la ciberseguridad haciendo uso de un dataset de BETH, a través de la implementación y el análisis avanzado del modelo de aprendizaje supervisado como Random Forest, así como el uso de técnicas de explicabilidad XAI, SHAP (Shapley Additive Explanations) como técnica principal de explicabilidad global debido a su consistencia basada en la teoría de juegos y LIME (Local Interpretable Model-agnostic Explanations) para la auditoría forense a nivel local.
 
 ### Objetivos especificos detectados
 
