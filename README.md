@@ -15,7 +15,7 @@ para efectos academicos, la misma que puede ser obtenida directo desde el siguie
 
 ### Problemática
 La detección de amenazas desconocidas y la identificación proactiva de vulnerabilidades en los entornos de ciberseguridad actuales exigen metodologías que trasciendan las limitaciones inherentes a los datos etiquetados.
-Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje no supervisado. 
+Esta dependencia de etiquetas preexistentes representa una debilidad estructural en los sistemas de defensa tradicionales, lo que justifica la adopción de enfoques de aprendizaje supervisado. 
 Dentro de este contexto es importante identificar y mitigar posibles sesgos en datasets de entrenamiento para que los modelos de aprendizaje no estén determinados por variables sesgadas. 
 
 ### Objetivo general identificado
@@ -56,10 +56,13 @@ resto como eventName o args.
 ![Texto alternativo](images/explicabilidadLime.png)
 
 ### Conclusiones y recomendaciones
-- Con la capacidad de sectorizar los puntos de impacto, tal cual nos indica los clusters, podremos ser mas eficientes y estratégicos al momento de ejecutar un mecanismo de contingencia.
+- El proceso de desarrollo de la solución de Detección de Anomalías en Ciberseguridad es ejemplar y metodológicamente robusto. Se seleccionó y validó de forma estratégica el modelo Random Forest como un balance óptimo entre capacidad predictiva frente a la no linealidad de las amenazas e interpretabilidad intrínseca.
 
-- Al momento de realizar las transformaciones necesarias, debemos tener en cuenta que usar datos lineales le darán mayor sentido a nuestra almacen de informacion y por consiguiente en todos los dashboards que usemos. (recordemos que en el caso de la base BETH no existen un numero natural de clusters por lo que la definición de K para K-means puede tornarse conflictiva)
+- La decisión crítica de implementar el Feature Blinding (eliminación de userId y processId) para forzar la generalización de patrones de comportamiento en lugar de memorizar identidades fue fundamental para mitigar el "Data Leakage" y el sesgo de contexto, lo que transformó el modelo de un "perfilador de usuarios" a un verdadero "detector de anomalías" con portabilidad garantizada a diferentes entornos.
 
-- No existe un modelo de ML perfecto para todos los problemas cotidianos, un analisis y comparativa es necesario para tomar el mas eficiente y adecuado a nuestras necesidades, métodos de redimensionamiento como el PCA pueden ser difíciles de interpretar debido a su capacidad de mezclar señales con ruidos, no deberían ser definitivos en estructuras finales.
+- La integración de las técnicas de explicabilidad SHAP visión global y validación del sesgo mitigado y LIME visión local y soporte forense para el SOC es la principal fortaleza del proyecto. Esta dualidad de herramientas demostró ser indispensable, no solo como un requisito académico de transparencia, sino como una herramienta de robustecimiento de seguridad al exponer fallos de diseño como la dependencia inicial del userId y mitigar riesgos éticos y operativos como el sesgo contra herramientas administrativas. Las visualizaciones basadas en SHAP y LIME actúan como la prueba irrefutable de la validez y coherencia del modelo.
 
-- El uso de t-sne, es correcto si solo haremos exploración visual de los resultados, ya que estos serán de carácter ficticio, y no deben usarse para segmentación.
+<img width="1040" height="407" alt="Recomendaciones" src="https://github.com/user-attachments/assets/bde27fcf-e174-410a-8a45-730e3e77505d" />
+
+
+
